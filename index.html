@@ -182,6 +182,22 @@ section{padding:84px 0}
 .bad li .ck{background:#e6ecf6;color:var(--muted)}
 .bad li{color:var(--muted)}
 
+/* VERTICALS */
+.vert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vert-card{background:#fff;border:1px solid var(--blue-line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.vert-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,27,61,.08)}
+.vert-tag{align-self:flex-start;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:var(--blue-soft);border-radius:999px;padding:6px 13px;margin-bottom:16px}
+.vert-card h3{font-size:20px;font-weight:700;margin-bottom:10px}
+.vert-card>p{font-size:14px;color:var(--muted);margin-bottom:22px}
+.vert-sub{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
+.pair-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:22px}
+.pair-list li{font-size:13.5px;line-height:1.45;padding-bottom:12px;border-bottom:1px solid var(--blue-line)}
+.pair-list li:last-child{border-bottom:none;padding-bottom:0}
+.pair-list li b{color:var(--ink);font-weight:600;display:block}
+.pair-list li span{color:var(--blue);font-weight:500}
+.vert-why{margin-top:auto;font-size:13px;color:var(--muted);background:var(--blue-tint);border:1px solid var(--blue-line);border-radius:10px;padding:13px 15px}
+.vert-why span{color:var(--ink);font-weight:600}
+
 /* INCLUDED */
 .incl{background:var(--navy);color:#fff;border-radius:28px;padding:60px 56px}
 .incl .section-head h2{color:#fff}
@@ -252,7 +268,7 @@ footer{padding:64px 0 40px;border-top:1px solid var(--blue-line);background:#fff
 
 @media (max-width:900px){
   .card-row,.results{grid-template-columns:repeat(2,1fr)}
-  .steps,.tcards,.shots,.compare,.fit,.incl-grid,.pillar,.anat-board{grid-template-columns:1fr}
+  .steps,.tcards,.shots,.compare,.fit,.incl-grid,.pillar,.anat-board,.vert-grid{grid-template-columns:1fr}
   .timeline{grid-template-columns:1fr;gap:8px}
   .tl-line{display:none}
   .tl{padding:14px 0;border-left:2px solid var(--blue-line);padding-left:22px}
@@ -287,7 +303,7 @@ footer{padding:64px 0 40px;border-top:1px solid var(--blue-line);background:#fff
       <a href="#pricing">Pricing</a>
     </nav>
     <div class="nav-cta">
-      <a href="#book" class="btn btn-primary">Book a call →</a>
+      <a href="https://calendly.com/courageoutbounder/cold-outbound-setup-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call →</a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -300,7 +316,7 @@ footer{padding:64px 0 40px;border-top:1px solid var(--blue-line);background:#fff
     <h1>The businesses that already serve your customers can send them <span class="accent">straight to you.</span></h1>
     <p class="sub">Twogeder builds the referral partnerships that bring you clients. We find the companies that already reach your market, run the outreach, and book the intros. One flat monthly rate, no per-lead fees.</p>
     <div class="hero-cta">
-      <a href="#book" class="btn btn-primary">Book a call →</a>
+      <a href="https://calendly.com/courageoutbounder/cold-outbound-setup-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call →</a>
       <a href="#how" class="btn btn-ghost">See how it works</a>
     </div>
     <div class="hero-note"><span class="dot"></span> Built for specialists who would rather earn referrals than rent ads.</div>
@@ -368,7 +384,7 @@ footer{padding:64px 0 40px;border-top:1px solid var(--blue-line);background:#fff
         <p>Real partners, real targets, in front of you before you decide.</p>
       </div>
     </div>
-    <a href="#book" class="btn btn-light">Book a call →</a>
+    <a href="https://calendly.com/courageoutbounder/cold-outbound-setup-call" target="_blank" rel="noopener" class="btn btn-light">Book a call →</a>
   </div>
 </section>
 
@@ -484,6 +500,65 @@ footer{padding:64px 0 40px;border-top:1px solid var(--blue-line);background:#fff
           <li><span class="ck">–</span> Need leads delivered the same day</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERTICALS -->
+<section id="verticals">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The three ways we partner</div>
+      <h2>Verticals we build for</h2>
+      <p>Every business has someone who meets its customer first. What changes from one vertical to the next is how that referral relationship is structured.</p>
+    </div>
+    <div class="vert-grid">
+
+      <div class="vert-card reveal" id="b2b">
+        <div class="vert-tag">B2B partnerships</div>
+        <h3>You sell to other businesses</h3>
+        <p>We connect you with the firms that already advise, serve, or sell to your buyers but don't do your part of the job. They route qualified accounts to you, and you send work back their way.</p>
+        <div class="vert-sub">Partnerships we build</div>
+        <ul class="pair-list">
+          <li><b>SaaS &amp; software</b><span>↔ implementation partners, agencies, resellers</span></li>
+          <li><b>MSPs &amp; IT services</b><span>↔ VoIP, cybersecurity, hardware vendors</span></li>
+          <li><b>Marketing agencies</b><span>↔ adjacent agencies who don't run your channel</span></li>
+          <li><b>Fractional CFOs &amp; bookkeepers</b><span>↔ law firms, business brokers, banks</span></li>
+          <li><b>Commercial services</b><span>↔ property managers, GCs, facilities firms</span></li>
+        </ul>
+        <div class="vert-why"><span>Why it works:</span> one signed partner can route deals for years, and the cost per intro is zero.</div>
+      </div>
+
+      <div class="vert-card reveal" id="b2c">
+        <div class="vert-tag">B2C partnerships</div>
+        <h3>You sell to consumers</h3>
+        <p>We find the local businesses that touch your customer right before or after they need you, then build the referral loop so each side hands clients to the other.</p>
+        <div class="vert-sub">Partnerships we build</div>
+        <ul class="pair-list">
+          <li><b>Roofing &amp; solar</b><span>↔ inspectors, realtors, GCs, HVAC</span></li>
+          <li><b>Photographers</b><span>↔ wedding planners, venues, realtors</span></li>
+          <li><b>Med spas &amp; aesthetics</b><span>↔ salons, gyms, personal trainers</span></li>
+          <li><b>Movers &amp; home services</b><span>↔ real estate agents, property managers</span></li>
+          <li><b>Caterers &amp; events</b><span>↔ venues, offices, event planners</span></li>
+        </ul>
+        <div class="vert-why"><span>Why it works:</span> the customer arrives already trusting you because someone they hired sent them.</div>
+      </div>
+
+      <div class="vert-card reveal" id="regulated">
+        <div class="vert-tag">Regulated fields</div>
+        <h3>Law, healthcare &amp; finance</h3>
+        <p>Where paid referrals cross a line, we design reciprocal and co-marketing relationships that stay inside the rules — Stark, Anti-Kickback, RESPA, and bar advertising guidance.</p>
+        <div class="vert-sub">Partnerships we build</div>
+        <ul class="pair-list">
+          <li><b>Oral surgeons &amp; specialists</b><span>↔ general dentists &amp; GPs</span></li>
+          <li><b>Personal injury law</b><span>↔ medical, auto, towing (compliance-framed)</span></li>
+          <li><b>Estate &amp; tax attorneys</b><span>↔ financial advisors, CPAs</span></li>
+          <li><b>Fertility &amp; specialty clinics</b><span>↔ OB/GYNs, primary care</span></li>
+          <li><b>Mortgage &amp; lending</b><span>↔ realtors, builders (RESPA-aware)</span></li>
+        </ul>
+        <div class="vert-why"><span>Why it works:</span> structured as reciprocal or co-marketing, so the channel stays compliant and lasts.</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -640,7 +715,7 @@ footer{padding:64px 0 40px;border-top:1px solid var(--blue-line);background:#fff
   <div class="final">
     <h2>Ready to see who would refer you?</h2>
     <p>Get on a call and we'll map the partners we'd reach out to for your business.</p>
-    <a href="#" class="btn btn-light">Book a call →</a>
+    <a href="https://calendly.com/courageoutbounder/cold-outbound-setup-call" target="_blank" rel="noopener" class="btn btn-light">Book a call →</a>
     <div class="sub-note">No commitment. See your partner list before you decide.</div>
   </div>
 </section>
@@ -664,15 +739,15 @@ footer{padding:64px 0 40px;border-top:1px solid var(--blue-line);background:#fff
       <div>
         <h5>Verticals</h5>
         <ul>
-          <li><a href="#">B2B partnerships</a></li>
-          <li><a href="#">B2C partnerships</a></li>
-          <li><a href="#">Regulated fields</a></li>
+          <li><a href="#b2b">B2B partnerships</a></li>
+          <li><a href="#b2c">B2C partnerships</a></li>
+          <li><a href="#regulated">Regulated fields</a></li>
         </ul>
       </div>
       <div>
         <h5>Connect</h5>
         <ul>
-          <li><a href="#book">Book a call</a></li>
+          <li><a href="https://calendly.com/courageoutbounder/cold-outbound-setup-call" target="_blank" rel="noopener">Book a call</a></li>
           <li><a href="#">LinkedIn</a></li>
           <li><a href="#">Email</a></li>
         </ul>
