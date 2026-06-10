@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twogeder — Partnership Campaigns That Refer You Clients</title>
+<meta name="description" content="B2B and B2C referral partnership campaigns. We find the businesses that already reach your customers, run the outreach, and book the intros. One flat retainer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#ffffff;
+  --ink:#0a1b3d;
+  --navy:#081634;
+  --navy-2:#0d2350;
+  --blue:#2563eb;
+  --blue-bright:#3b82f6;
+  --blue-soft:#eaf1ff;
+  --blue-tint:#f4f8ff;
+  --blue-line:#d6e2fb;
+  --muted:#5a6a88;
+  --muted-d:#9fb2d6;
+  --maxw:1140px;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em;line-height:1.05}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:12px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--blue);
+}
+.eyebrow.light{color:var(--blue-bright)}
+.sample-tag{
+  display:inline-block;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--muted);border:1px dashed var(--blue-line);border-radius:999px;padding:4px 12px;margin-bottom:18px;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;
+  padding:14px 24px;border-radius:999px;cursor:pointer;border:1.5px solid transparent;
+  transition:transform .15s ease, background .15s ease, box-shadow .15s ease;
+}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 24px rgba(37,99,235,.28)}
+.btn-primary:hover{transform:translateY(-2px);background:#1d4ed8}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--blue-line)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-light:hover{transform:translateY(-2px)}
+.btn-outline-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.btn-outline-light:hover{border-color:#fff}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--blue-line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;letter-spacing:-0.02em}
+.brand .mark{display:inline-block;width:26px;height:18px;position:relative}
+.brand .mark i{position:absolute;top:0;width:18px;height:18px;border-radius:50%;border:2.5px solid var(--blue)}
+.brand .mark i:first-child{left:0}
+.brand .mark i:last-child{left:8px;border-color:var(--blue-bright);background:rgba(59,130,246,.12)}
+.nav-links{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:500;color:var(--muted)}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
+.nav-toggle span{width:22px;height:2px;background:var(--ink);display:block}
+
+/* HERO */
+.hero{position:relative;padding:96px 0 80px;overflow:hidden;background:
+  radial-gradient(900px 500px at 80% -10%, rgba(59,130,246,.10), transparent 60%),
+  linear-gradient(180deg,#fff 0%, var(--blue-tint) 100%)}
+.hero-eyebrow{margin-bottom:22px}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:700;max-width:920px}
+.hero h1 .accent{color:var(--blue)}
+.hero p.sub{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:640px;margin:26px 0 34px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero-note{margin-top:30px;font-size:14px;color:var(--muted);display:flex;align-items:center;gap:9px}
+.hero-note .dot{width:8px;height:8px;border-radius:50%;background:var(--blue-bright)}
+
+/* SECTION basics */
+section{padding:84px 0}
+.section-head{max-width:640px;margin-bottom:48px}
+.section-head h2{font-size:clamp(28px,4vw,44px);font-weight:700;margin-top:14px}
+.section-head p{color:var(--muted);font-size:17px;margin-top:16px}
+.center{margin-left:auto;margin-right:auto;text-align:center}
+
+/* VERTICAL CARDS (mirror trust cards) */
+.tint{background:var(--blue-tint)}
+.card-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.vcard{background:#fff;border:1px solid var(--blue-line);border-radius:var(--radius);padding:26px;transition:transform .18s ease,box-shadow .18s ease}
+.vcard:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(10,27,61,.08)}
+.vcard .ico{width:42px;height:42px;border-radius:11px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
+.vcard h3{font-size:18px;font-weight:600;margin-bottom:8px}
+.vcard p{font-size:14px;color:var(--muted)}
+.vcard .pair{margin-top:14px;font-size:13px;font-weight:600;color:var(--blue)}
+
+/* STEPS (mirror see results before commit) */
+.commit{background:var(--navy);color:#fff;border-radius:28px;padding:64px 56px;margin:0 auto;max-width:var(--maxw)}
+.commit .section-head h2{color:#fff}
+.commit .section-head p{color:var(--muted-d)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:38px 0 36px}
+.step{position:relative;padding-top:8px}
+.step .num{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--blue-bright);letter-spacing:.1em}
+.step h3{font-size:19px;font-weight:600;margin:12px 0 8px;color:#fff}
+.step p{font-size:14px;color:var(--muted-d)}
+.step:not(:last-child)::after{content:"";position:absolute;top:18px;right:-13px;width:10px;height:10px;border-top:2px solid rgba(255,255,255,.25);border-right:2px solid rgba(255,255,255,.25);transform:rotate(45deg)}
+
+/* MARQUEE */
+.marquee-sec{padding:46px 0;border-top:1px solid var(--blue-line);border-bottom:1px solid var(--blue-line);background:#fff}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:flex;gap:46px;width:max-content;animation:scroll 34s linear infinite}
+.marquee-track span{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:10px}
+.marquee-track span b{color:var(--blue)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* TESTIMONIALS / RESULTS / SCREENSHOTS sample sections */
+.tcards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.tcard{background:#fff;border:1px solid var(--blue-line);border-radius:var(--radius);padding:28px}
+.tcard .who{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.tcard .av{width:42px;height:42px;border-radius:50%;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--blue);font-family:'Space Grotesk'}
+.tcard .who h4{font-size:15px;font-weight:600}
+.tcard .who span{font-size:13px;color:var(--muted)}
+.tcard q{font-size:15px;color:var(--ink);font-style:italic;display:block}
+
+.results{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.rcard{background:#fff;border:1px solid var(--blue-line);border-radius:14px;padding:22px;text-align:left}
+.rcard .stat{font-family:'Space Grotesk';font-size:30px;font-weight:700;color:var(--blue)}
+.rcard h4{font-size:15px;font-weight:600;margin:10px 0 4px}
+.rcard p{font-size:13px;color:var(--muted)}
+
+.wall{column-count:3;column-gap:16px}
+.pc{background:#fff;border:1px solid #e6eaf1;border-radius:12px;padding:16px 18px;margin:0 0 16px;break-inside:avoid;box-shadow:0 4px 16px rgba(10,27,61,.05);font-size:14px}
+.pc-top{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.pc .av-r{width:40px;height:40px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Space Grotesk';font-size:15px;flex:none}
+.pc .av-sq{border-radius:10px}
+.pc .nm{font-weight:600;line-height:1.25;font-size:14px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.pc .nm small{flex-basis:100%;font-size:12px;color:var(--muted);font-weight:500}
+.pc .badge{margin-left:auto;width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800;flex:none;font-family:'Space Grotesk'}
+.pc .body{color:var(--ink);line-height:1.55}
+.pc .meta{display:flex;align-items:center;gap:14px;margin-top:12px;font-size:12.5px;color:var(--muted);font-weight:500}
+.pc .meta span{display:inline-flex;align-items:center;gap:5px}
+.pc .verified{color:#1d9bf0;font-size:13px}
+.pc .handle{color:var(--muted);font-weight:500}
+.b-slack{background:#4a154b}.b-li{background:#0a66c2}.b-fb{background:#1877f2}
+.b-gmail{background:#ea4335}.b-yt{background:#ff0000;border-radius:6px;font-size:10px}.b-x{background:#000}
+.fb-bubble{background:#f0f2f5;border-radius:16px;padding:10px 14px}
+.fb-bubble .fbn{font-weight:600;color:#385898;font-size:13px;margin-bottom:3px}
+.gm-subj{font-weight:600;margin:0 0 6px}
+.pc .star{margin-left:auto;color:#f4b400;font-size:16px;flex:none}
+@media (max-width:900px){.wall{column-count:2}}
+@media (max-width:560px){.wall{column-count:1}}
+
+/* TIMELINE */
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-top:20px}
+.tl{padding:0 16px;position:relative}
+.tl .when{font-family:'Space Grotesk';font-size:13px;font-weight:700;color:var(--blue);letter-spacing:.06em;text-transform:uppercase}
+.tl .dot{width:16px;height:16px;border-radius:50%;background:var(--blue);margin:18px 0;position:relative;z-index:2;box-shadow:0 0 0 5px var(--blue-soft)}
+.tl h3{font-size:17px;font-weight:600;margin-bottom:6px}
+.tl p{font-size:13px;color:var(--muted)}
+.tl-line{position:absolute;top:calc(18px + 28px);left:0;right:0;height:2px;background:var(--blue-line);z-index:1}
+
+/* FIT */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.fitcol{border-radius:var(--radius);padding:34px;border:1px solid var(--blue-line)}
+.fitcol.good{background:var(--blue-soft);border-color:#c5d8fb}
+.fitcol.bad{background:#fff}
+.fitcol h3{font-size:20px;font-weight:600;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.fitcol ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.fitcol li{font-size:15px;display:flex;align-items:flex-start;gap:11px;color:var(--ink)}
+.fitcol li .ck{flex:none;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:1px}
+.good li .ck{background:var(--blue);color:#fff}
+.bad li .ck{background:#e6ecf6;color:var(--muted)}
+.bad li{color:var(--muted)}
+
+/* INCLUDED */
+.incl{background:var(--navy);color:#fff;border-radius:28px;padding:60px 56px}
+.incl .section-head h2{color:#fff}
+.incl-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;margin-top:10px}
+.incl-grid li{list-style:none;display:flex;gap:14px;align-items:flex-start;font-size:16px;color:#eaf1ff}
+.incl-grid .ck{flex:none;width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;margin-top:1px}
+
+/* METHODOLOGY */
+.pillar{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:42px 0;border-top:1px solid var(--blue-line)}
+.pillar:first-of-type{border-top:none}
+.pillar .pnum{font-family:'Space Grotesk';font-size:14px;font-weight:700;color:var(--blue);letter-spacing:.1em}
+.pillar h3{font-size:26px;font-weight:700;margin:12px 0 14px}
+.pillar p{color:var(--muted);font-size:16px;margin-bottom:20px}
+.pillar ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.pillar li{font-size:15px;display:flex;gap:11px;align-items:flex-start}
+.pillar li .ck{flex:none;width:20px;height:20px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px}
+.pillar .visual{background:var(--blue-tint);border:1px solid var(--blue-line);border-radius:var(--radius);padding:34px;min-height:220px;display:flex;align-items:center;justify-content:center}
+.flow{display:flex;flex-direction:column;gap:14px;width:100%}
+.flow .node{background:#fff;border:1px solid var(--blue-line);border-radius:12px;padding:14px 18px;font-size:14px;font-weight:600;display:flex;align-items:center;gap:12px}
+.flow .node .b{width:30px;height:30px;border-radius:8px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:15px}
+.flow .arrow{text-align:center;color:var(--blue);font-size:18px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:#fff;border:1px solid var(--blue-line);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:600;color:var(--ink)}
+
+/* ANATOMY (mirror video slot) */
+.anatomy{background:var(--blue-tint)}
+.anat-board{background:#fff;border:1px solid var(--blue-line);border-radius:24px;padding:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:center}
+.anat-step{text-align:center;padding:10px}
+.anat-step .ic{width:62px;height:62px;border-radius:16px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 14px}
+.anat-step h4{font-size:16px;font-weight:600;margin-bottom:6px}
+.anat-step p{font-size:13px;color:var(--muted)}
+.anat-arrow{display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:24px}
+
+/* COMPARE (mirror partner-quotes slot) */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ccard{border-radius:var(--radius);padding:34px;border:1px solid var(--blue-line)}
+.ccard.win{background:var(--blue-soft);border-color:#c5d8fb}
+.ccard h3{font-size:20px;font-weight:600;margin-bottom:18px}
+.ccard ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.ccard li{font-size:15px;display:flex;gap:11px;align-items:flex-start;color:var(--ink)}
+.ccard li .ck{flex:none;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px}
+.win li .ck{background:var(--blue);color:#fff}
+.ccard.lose li{color:var(--muted)}
+.ccard.lose li .ck{background:#e6ecf6;color:var(--muted)}
+
+/* FINAL CTA */
+.final{background:
+  radial-gradient(700px 400px at 50% -20%, rgba(59,130,246,.35), transparent 60%),
+  var(--navy);color:#fff;text-align:center;border-radius:28px;padding:74px 40px;max-width:var(--maxw);margin:0 auto}
+.final h2{font-size:clamp(30px,4.5vw,48px);font-weight:700;max-width:720px;margin:0 auto 18px}
+.final p{color:var(--muted-d);font-size:18px;max-width:520px;margin:0 auto 30px}
+.final .sub-note{margin-top:22px;font-size:14px;color:var(--muted-d)}
+
+/* FOOTER */
+footer{padding:64px 0 40px;border-top:1px solid var(--blue-line);background:#fff}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+.foot .brand{margin-bottom:14px}
+.foot p.tag{font-size:14px;color:var(--muted);max-width:240px}
+.foot h5{font-family:'Space Grotesk';font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:16px}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.foot a{font-size:14px;color:var(--muted)}
+.foot a:hover{color:var(--blue)}
+.copy{margin-top:48px;padding-top:24px;border-top:1px solid var(--blue-line);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .card-row,.results{grid-template-columns:repeat(2,1fr)}
+  .steps,.tcards,.shots,.compare,.fit,.incl-grid,.pillar,.anat-board{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr;gap:8px}
+  .tl-line{display:none}
+  .tl{padding:14px 0;border-left:2px solid var(--blue-line);padding-left:22px}
+  .tl .dot{position:absolute;left:-9px;margin:0;top:16px}
+  .anat-arrow{transform:rotate(90deg)}
+  .pillar .visual{order:2}
+  .nav-links{display:none}
+  .nav-toggle{display:flex}
+  .nav-links.open{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:22px 24px;border-bottom:1px solid var(--blue-line);gap:18px}
+  .commit,.incl,.final{padding-left:28px;padding-right:28px;border-radius:20px}
+}
+@media (max-width:560px){
+  .card-row,.results{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .marquee-track{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand"><span class="mark"><i></i><i></i></span>Twogeder</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#how">How it works</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#fit">Who it's for</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#book" class="btn btn-primary">Book a call →</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow hero-eyebrow">B2B + B2C Partnership Campaigns</div>
+    <h1>The businesses that already serve your customers can send them <span class="accent">straight to you.</span></h1>
+    <p class="sub">Twogeder builds the referral partnerships that bring you clients. We find the companies that already reach your market, run the outreach, and book the intros. One flat monthly rate, no per-lead fees.</p>
+    <div class="hero-cta">
+      <a href="#book" class="btn btn-primary">Book a call →</a>
+      <a href="#how" class="btn btn-ghost">See how it works</a>
+    </div>
+    <div class="hero-note"><span class="dot"></span> Built for specialists who would rather earn referrals than rent ads.</div>
+  </div>
+</section>
+
+<!-- VERTICAL CARDS (mirror trust row) -->
+<section class="tint">
+  <div class="wrap">
+    <div class="section-head center" style="margin-left:auto;margin-right:auto">
+      <div class="eyebrow">Where this works</div>
+      <h2>Partnerships exist in almost every vertical</h2>
+    </div>
+    <div class="card-row">
+      <div class="vcard reveal">
+        <div class="ico">🦷</div>
+        <h3>Specialty health</h3>
+        <p>Oral surgery, orthodontics, fertility, audiology.</p>
+        <div class="pair">↔ general practices who don't offer it</div>
+      </div>
+      <div class="vcard reveal">
+        <div class="ico">⚖️</div>
+        <h3>Legal</h3>
+        <p>Personal injury, estate planning, immigration.</p>
+        <div class="pair">↔ the businesses who meet the client first</div>
+      </div>
+      <div class="vcard reveal">
+        <div class="ico">🏠</div>
+        <h3>Home services</h3>
+        <p>Roofing, solar, HVAC, pest, pools.</p>
+        <div class="pair">↔ contractors, inspectors, realtors</div>
+      </div>
+      <div class="vcard reveal">
+        <div class="ico">📈</div>
+        <h3>Agencies + B2B</h3>
+        <p>Design, paid ads, MSPs, fractional finance.</p>
+        <div class="pair">↔ adjacent firms who don't do your part</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEE PARTNERS BEFORE COMMIT -->
+<section>
+  <div class="commit">
+    <div class="section-head">
+      <div class="eyebrow light">See it before you commit</div>
+      <h2>See who would refer you before you pay a cent</h2>
+      <p>Not sure partnerships will work for your business? Get on a call and we map the exact partners we would reach out to for you. If the list is strong, we start. If not, you have lost nothing and you keep the list.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Tell us your ICP</h3>
+        <p>Your offer, your best clients, and the market you serve.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>We map your partners</h3>
+        <p>The businesses that already reach those clients but don't compete.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>See your list</h3>
+        <p>Real partners, real targets, in front of you before you decide.</p>
+      </div>
+    </div>
+    <a href="#book" class="btn btn-light">Book a call →</a>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="marquee-sec">
+  <div class="marquee">
+    <div class="marquee-track" id="marquee">
+      <span>Oral surgeons <b>↔</b> general dentists</span>
+      <span>PI firms <b>↔</b> tow companies</span>
+      <span>Photographers <b>↔</b> realtors</span>
+      <span>Roofers <b>↔</b> solar installers</span>
+      <span>Med spas <b>↔</b> salons</span>
+      <span>Estate lawyers <b>↔</b> financial advisors</span>
+      <span>Cleaners <b>↔</b> property managers</span>
+      <span>MSPs <b>↔</b> VoIP providers</span>
+      <span>Oral surgeons <b>↔</b> general dentists</span>
+      <span>PI firms <b>↔</b> tow companies</span>
+      <span>Photographers <b>↔</b> realtors</span>
+      <span>Roofers <b>↔</b> solar installers</span>
+      <span>Med spas <b>↔</b> salons</span>
+      <span>Estate lawyers <b>↔</b> financial advisors</span>
+      <span>Cleaners <b>↔</b> property managers</span>
+      <span>MSPs <b>↔</b> VoIP providers</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS (sample) -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What clients say</div>
+      <h2>Operators who built the channel</h2>
+    </div>
+    <div class="tcards">
+      <div class="tcard reveal">
+        <div class="who"><div class="av">SO</div><div><h4>Seun Ojo</h4><span>CEO, OpsBrain</span></div></div>
+        <q>"We spent a year trying to get in front of the ops consultants who already advise our buyers. Twogeder had eleven of them in partnership talks inside two months. That channel now drives more demos than our paid ads."</q>
+      </div>
+      <div class="tcard reveal">
+        <div class="who"><div class="av">KO</div><div><h4>Kelvin O.</h4><span>Owner, KevsKitchen</span></div></div>
+        <q>"Weekdays used to be dead. Now offices and two event venues send us catering orders every week from the partnerships Twogeder set up. It paid for itself in the first month."</q>
+      </div>
+      <div class="tcard reveal">
+        <div class="who"><div class="av">DC</div><div><h4>Donnel Chime</h4><span>Founder &amp; CEO, GDnD</span></div></div>
+        <q>"We used to chase every project through bids. Twogeder lined us up with builders and developers who now bring work to us first. We have signed three projects off the back of it already."</q>
+      </div>
+      <div class="tcard reveal">
+        <div class="who"><div class="av">BA</div><div><h4>Bene Alison</h4><span>Owner, Benetics</span></div></div>
+        <q>"They built reciprocal referral relationships with local GPs and a diabetes clinic, all structured to stay inside the rules. We see new patients every week who were sent straight to us."</q>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS (sample) -->
+<section class="tint">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Case studies</div>
+      <h2>The results speak for themselves</h2>
+    </div>
+    <div class="results">
+      <div class="rcard reveal"><div class="stat">11</div><h4>OpsBrain</h4><p>agency and consultant partners signed in 60 days</p></div>
+      <div class="rcard reveal"><div class="stat">14</div><h4>KevsKitchen</h4><p>catering partnerships with venues and offices</p></div>
+      <div class="rcard reveal"><div class="stat">8</div><h4>GDnD</h4><p>builder and developer referral partners</p></div>
+      <div class="rcard reveal"><div class="stat">9</div><h4>Benetics</h4><p>reciprocal clinic relationships, kept compliant</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK TOGETHER -->
+<section id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How we work together</div>
+      <h2>From your offer to booked intros</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-line"></div>
+      <div class="tl"><div class="when">Day 0</div><div class="dot"></div><h3>The call</h3><p>We map your ICP and the partner types that matter most.</p></div>
+      <div class="tl"><div class="when">Week 1</div><div class="dot"></div><h3>Build the list</h3><p>We source every partner in your market worth reaching.</p></div>
+      <div class="tl"><div class="when">Weeks 1-2</div><div class="dot"></div><h3>Launch outreach</h3><p>Personalized outreach goes out to each partner.</p></div>
+      <div class="tl"><div class="when">Ongoing</div><div class="dot"></div><h3>Book intros</h3><p>Qualified partner meetings land on your calendar.</p></div>
+      <div class="tl"><div class="when">You</div><div class="dot"></div><h3>Sign partners</h3><p>You take the meetings and lock the referral relationships.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="tint" id="fit">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">We work best with</div>
+      <h2>Honest fit beats a hard sell</h2>
+    </div>
+    <div class="fit">
+      <div class="fitcol good">
+        <h3>Best fit</h3>
+        <ul>
+          <li><span class="ck">✓</span> A clear specialty or niche others don't offer</li>
+          <li><span class="ck">✓</span> High value per client, so a referral is worth real money</li>
+          <li><span class="ck">✓</span> Businesses nearby that see your customers first</li>
+          <li><span class="ck">✓</span> Capacity to take a few intro calls a week</li>
+        </ul>
+      </div>
+      <div class="fitcol bad">
+        <h3>Usually not the best fit</h3>
+        <ul>
+          <li><span class="ck">–</span> Ultra low-ticket offers with thin margins</li>
+          <li><span class="ck">–</span> No obvious adjacent businesses to partner with</li>
+          <li><span class="ck">–</span> No time to meet or onboard partners</li>
+          <li><span class="ck">–</span> Need leads delivered the same day</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="incl">
+      <div class="section-head">
+        <div class="eyebrow light">What's included</div>
+        <h2>One flat rate. Everything to build the channel.</h2>
+        <p style="color:var(--muted-d)">$500 to $700 a month depending on how many partnership angles we run. No per-lead fees. No setup cost.</p>
+      </div>
+      <ul class="incl-grid">
+        <li><span class="ck">✓</span> Partner sourcing across your entire market</li>
+        <li><span class="ck">✓</span> Done-for-you outreach to every partner</li>
+        <li><span class="ck">✓</span> Booked intro meetings, straight to your calendar</li>
+        <li><span class="ck">✓</span> Both B2B and B2C partnership angles</li>
+        <li><span class="ck">✓</span> Flat retainer, the same whether one partner refers or ten</li>
+        <li><span class="ck">✓</span> Compliance-aware framing for law and healthcare</li>
+        <li><span class="ck">✓</span> Every partner list is yours to keep</li>
+        <li><span class="ck">✓</span> No long contracts, cancel any time</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section id="methodology">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Our methodology</div>
+      <h2>Three pillars. Zero guesswork.</h2>
+      <p>From the businesses that already touch your customer to a signed referral relationship.</p>
+    </div>
+
+    <div class="pillar">
+      <div>
+        <div class="pnum">01</div>
+        <h3>Partner mapping</h3>
+        <p>We don't guess. We map the businesses that already stand between your customer and you, then rank them by how often they meet that customer first.</p>
+        <ul>
+          <li><span class="ck">✓</span> Sourced by vertical and geography</li>
+          <li><span class="ck">✓</span> Filtered to who sees your customer first</li>
+          <li><span class="ck">✓</span> A list worth pursuing, not a scrape</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <div class="flow">
+          <div class="node"><span class="b">👤</span> Customer needs your thing</div>
+          <div class="arrow">↓</div>
+          <div class="node"><span class="b">🏢</span> Partner meets them first</div>
+          <div class="arrow">↓</div>
+          <div class="node"><span class="b">⭐</span> Partner refers them to you</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <div>
+        <div class="pnum">02</div>
+        <h3>Outreach</h3>
+        <p>Every email opens by quoting the partner back to themselves. No spray and pray. We lead with what is in it for them, then book the intro.</p>
+        <ul>
+          <li><span class="ck">✓</span> Personalized first lines, every send</li>
+          <li><span class="ck">✓</span> Reciprocal value framing, not a cold pitch</li>
+          <li><span class="ck">✓</span> Booked intros, not just replies</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <div class="chips">
+          <span class="chip">Personalized opener</span>
+          <span class="chip">What's in it for them</span>
+          <span class="chip">Reciprocal terms</span>
+          <span class="chip">Soft CTA</span>
+          <span class="chip">Booked intro</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <div>
+        <div class="pnum">03</div>
+        <h3>Partnership design</h3>
+        <p>We structure the relationship so it actually holds and keeps referring. For regulated fields, we frame it to stay inside the rules.</p>
+        <ul>
+          <li><span class="ck">✓</span> Referral terms that fit the vertical</li>
+          <li><span class="ck">✓</span> Reciprocal or co-marketing for law and healthcare</li>
+          <li><span class="ck">✓</span> Built to keep referring, not a one-off</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <div class="flow">
+          <div class="node"><span class="b">🤝</span> Terms both sides want</div>
+          <div class="arrow">↓</div>
+          <div class="node"><span class="b">🔁</span> Referrals flow both ways</div>
+          <div class="arrow">↓</div>
+          <div class="node"><span class="b">📈</span> Channel compounds over time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANATOMY (mirror video slot) -->
+<section class="anatomy">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Anatomy of a partnership</div>
+      <h2>One relationship, a steady flow of clients</h2>
+    </div>
+    <div class="anat-board">
+      <div class="anat-step"><div class="ic">👤</div><h4>The customer</h4><p>Needs your exact service.</p></div>
+      <div class="anat-arrow">→</div>
+      <div class="anat-step"><div class="ic">🏢</div><h4>The partner</h4><p>Meets them first, doesn't offer it.</p></div>
+      <div class="anat-arrow">→</div>
+      <div class="anat-step"><div class="ic">⭐</div><h4>You</h4><p>Get the referral, both sides win.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE (mirror partner-quotes slot) -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Why partnerships</div>
+      <h2>Referrals vs paid leads</h2>
+    </div>
+    <div class="compare">
+      <div class="ccard win">
+        <h3>Referral partnerships</h3>
+        <ul>
+          <li><span class="ck">✓</span> Warm. The customer arrives already trusting you.</li>
+          <li><span class="ck">✓</span> No cost per lead, the partnership compounds.</li>
+          <li><span class="ck">✓</span> One partner can send clients for years.</li>
+          <li><span class="ck">✓</span> Trust transfers from a source the client already uses.</li>
+        </ul>
+      </div>
+      <div class="ccard lose">
+        <h3>Paid leads</h3>
+        <ul>
+          <li><span class="ck">–</span> Cold. You earn the trust from scratch every time.</li>
+          <li><span class="ck">–</span> Pay again for every single lead.</li>
+          <li><span class="ck">–</span> Spend stops, leads stop.</li>
+          <li><span class="ck">–</span> Rising costs as more bidders crowd the auction.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="book">
+  <div class="final">
+    <h2>Ready to see who would refer you?</h2>
+    <p>Get on a call and we'll map the partners we'd reach out to for your business.</p>
+    <a href="#" class="btn btn-light">Book a call →</a>
+    <div class="sub-note">No commitment. See your partner list before you decide.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand"><span class="mark"><i></i><i></i></span>Twogeder</div>
+        <p class="tag">Partnership campaigns that refer you clients. B2B and B2C.</p>
+      </div>
+      <div>
+        <h5>Service</h5>
+        <ul>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#methodology">Methodology</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Verticals</h5>
+        <ul>
+          <li><a href="#">B2B partnerships</a></li>
+          <li><a href="#">B2C partnerships</a></li>
+          <li><a href="#">Regulated fields</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="#book">Book a call</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 Twogeder. All rights reserved.</span>
+      <span>Two businesses. One referral. Everyone gets paid.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  const t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+  t&&t.addEventListener('click',()=>l.classList.toggle('open'));
+  l&&l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));
+
+  // duplicate marquee already hardcoded for seamless loop
+
+  // reveal on scroll
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  }else{
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+  }
+</script>
+</body>
+</html>
